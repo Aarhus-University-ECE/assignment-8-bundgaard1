@@ -1,0 +1,18 @@
+Exercise 1 - text answer
+
+/* Factorial function definition */
+int fact(int n) {
+    int i; /* counter variable */
+    int f; /* factorial */
+    /* pre-condition */
+    assert (n >= 0);
+    /* post-condition */
+    f = 1;
+    for(i = 1; i <= n; i = i + 1){
+        f = i * f;
+    }
+    return f;
+}
+
+
+a)
