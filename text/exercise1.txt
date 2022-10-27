@@ -14,5 +14,19 @@ int fact(int n) {
     return f;
 }
 
+(a) How many arithmetic operations (+, −, ∗, /) are required to compute fact(5)?
 
-a)
+    There are no arithmetic operations before the loop.
+    However in the loop, f is multiplied by i, and i is incremnented by 1.
+    That is 2 operations for a loop.
+    If n = 5, the loop is run through 5 times.
+    Which makes the total aritmetic operation 2 * 5 = 10.
+
+
+(b) How many arithmetic operations (+, −, ∗, /) are required to compute fact(n) for any positive integer n?
+
+    As stated above there is 2 operations done, for each run through the loop.
+    The loop is run for as long as i is less than and equal to n.
+    i starts at 1 and is incremnented by 1 each loop.
+    which means the loop is run n times. 
+    The total aritmetic operations for fact(n) is n * 2.
