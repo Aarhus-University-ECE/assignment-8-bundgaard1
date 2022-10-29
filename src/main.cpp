@@ -71,22 +71,25 @@ void sort_test() {
 
     linked_list* LL = createLinkedList();
 
-    insertFront(createNode(40), LL);
+    insertFront(createNode(-40), LL);
     insertFront(createNode(15), LL);
     insertFront(createNode(50), LL);
-    insertFront(createNode(20), LL);
+    insertFront(createNode(-20), LL);
     insertFront(createNode(10), LL);
     insertFront(createNode(47), LL);
-    insertFront(createNode(50), LL);
+    insertFront(createNode(-50), LL);
     insertFront(createNode(94), LL);
     insertFront(createNode(26), LL);
 
+    printLL(LL);
     sort(LL);
+    printLL(LL);
 
     node_t* n = LL->head;
 
     while (n != NULL && n->next != NULL && passed) {
-        passed = (n->data <= n->next->data);
+        passed = (passed && n->data <= n->next->data);
+        printf("%d <= %d \n", n->data, n->next->data);
         n = n->next;
     }
 
