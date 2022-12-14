@@ -32,7 +32,7 @@ void enqueue(queue *q, int x) {
 }
 
 int dequeue(queue *q) {
-    assert(!empty(q));      // Make sure the queue is not empty
+    // Make sure the queue is not empty
     qnode *foo = q->front;  // Save the front node
     int value = foo->data;  // Get the value of the front node
     q->front = foo->next;   // Set a new front of queue
